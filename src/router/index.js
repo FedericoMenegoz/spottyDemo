@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import UserLogin from '../views/UserLogin.vue'
+import UserSignUp from '../views/UserSignUp.vue'
+import ProductSpecs from '../views/ProductSpecs.vue'
+import SearchResults from '../views/SearchResults.vue'
+import PubblicaAnnuncio from '../views/PubblicaAnnuncio.vue'
 
 Vue.use(VueRouter)
 
@@ -11,12 +16,29 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/userlogin',
+    name: 'userlogin',
+    component: UserLogin
+  },
+  {
+    path: '/usersignup',
+    name: 'usersignup',
+    component: UserSignUp
+  },
+  {
+    path: '/productspecs',
+    name: 'productspecs',
+    component: ProductSpecs
+  },
+  {
+    path: '/searchresults',
+    name: 'searchresults',
+    component: SearchResults
+  },
+  {
+    path: '/pubblicaannuncio',
+    name: 'pubblicaannuncio',
+    component: PubblicaAnnuncio
   }
 ]
 

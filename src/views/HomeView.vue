@@ -1,18 +1,41 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home" >
+    <h1 class="secondary--text mt-2 mx-3" align="center">
+      <div>
+        <span>Affitta o </span><span class="accent--text"> compra</span>
+      </div>
+        <span>
+          quello che vuoi, dove vuoi e quando vuoi
+        </span>
+    </h1>
+    
+    <v-row class="mt-2 mx-3" dense>
+
+      <v-spacer></v-spacer>
+      <v-text-field
+
+      class="d-inline-flex pa-2"
+      placeholder="bicicletta, drone, consolle..."
+      filled
+      dense
+      rounded
+      append-icon="mdi-magnify"
+      ></v-text-field> 
+      <v-spacer></v-spacer>
+    </v-row>
+    <categoryGrid/>
+
   </div>
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import categoryGrid from '@/components/categoryGrid'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+
+  export default {
+    components : { categoryGrid },
+    name: 'MyHome',
+
   }
-}
 </script>
